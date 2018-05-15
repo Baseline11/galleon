@@ -1,0 +1,10 @@
+{
+  "name": "galleon",
+  "version": "1.0.0",
+  "author": "Baseline Telematics",
+  "license": "UNLICENSED",
+  "description": "A React UI container library for internal use only",
+  "main": "./index.js",
+  "module": "./index.js",
+  "private": true
+}
