@@ -23,9 +23,7 @@ var _redux = require('redux');
 
 var _laelia = require('laelia');
 
-var _adminUser = require('commonRedux/actions/adminUser');
-
-var _adminUsers = require('commonRedux/actions/adminUsers');
+var _actions = require('./actions');
 
 var _UserList = require('./components/UserList');
 
@@ -68,11 +66,11 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actionCreators: (0, _redux.bindActionCreators)({
-      fetchAdminUsers: _adminUsers.fetchAdminUsers,
-      sortAdminUsers: _adminUsers.sortAdminUsers,
-      filterAdminUsers: _adminUsers.filterAdminUsers,
-      updateAdminUserStatus: _adminUser.updateAdminUserStatus,
-      reinviteAdminUser: _adminUser.reinviteAdminUser
+      fetchAdminUsers: _actions.fetchAdminUsers,
+      sortAdminUsers: _actions.sortAdminUsers,
+      filterAdminUsers: _actions.filterAdminUsers,
+      updateAdminUserStatus: _actions.updateAdminUserStatus,
+      reinviteAdminUser: _actions.reinviteAdminUser
     }, dispatch)
   };
 }
@@ -87,8 +85,8 @@ var AdminUsers = function (_Component) {
   }
 
   _createClass(AdminUsers, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
       this.props.actionCreators.fetchAdminUsers();
     }
   }, {
@@ -122,25 +120,25 @@ var AdminUsers = function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 68
           }
         },
         _react2.default.createElement(_SearchResultTitle2.default, { data: adminUsers.length, __source: {
             fileName: _jsxFileName,
-            lineNumber: 67
+            lineNumber: 69
           }
         }),
         _react2.default.createElement(_AddUserButton2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 68
+            lineNumber: 70
           }
         }),
         _react2.default.createElement(
           'div',
           { style: _styles2.default.filterWrapper, __source: {
               fileName: _jsxFileName,
-              lineNumber: 69
+              lineNumber: 71
             }
           },
           _react2.default.createElement(
@@ -148,7 +146,7 @@ var AdminUsers = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 70
+                lineNumber: 72
               }
             },
             'User role',
@@ -165,7 +163,7 @@ var AdminUsers = function (_Component) {
               wrapperStyleOverride: _styles2.default.filterSelect,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 72
+                lineNumber: 74
               }
             })
           ),
@@ -174,7 +172,7 @@ var AdminUsers = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 83
+                lineNumber: 85
               }
             },
             'Status',
@@ -191,7 +189,7 @@ var AdminUsers = function (_Component) {
               wrapperStyleOverride: _styles2.default.filterSelect,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 85
+                lineNumber: 87
               }
             })
           )
@@ -204,7 +202,7 @@ var AdminUsers = function (_Component) {
           handleOnSort: actionCreators.sortAdminUsers,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 97
+            lineNumber: 99
           }
         })
       );

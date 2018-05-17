@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.reinviteAdminUser = exports.updateAdminUserStatus = exports.unselectUserRole = exports.selectUserRole = exports.deactivateAdminRole = exports.activateAdminRole = exports.fetchInvitationText = exports.saveAdminUser = exports.fetchAdminUser = exports.initialState = undefined;
+exports.unselectUserRole = exports.selectUserRole = exports.deactivateAdminRole = exports.activateAdminRole = exports.fetchInvitationText = exports.saveAdminUser = exports.fetchAdminUser = exports.initialState = undefined;
 
 var _cases;
 
@@ -130,8 +130,5 @@ var activateAdminRole = exports.activateAdminRole = reducer.createAction(_types.
 var deactivateAdminRole = exports.deactivateAdminRole = reducer.createAction(_types.DEACTIVATE_ADMIN_ROLE);
 var selectUserRole = exports.selectUserRole = reducer.createAction(_types.SELECT_USER_ROLE);
 var unselectUserRole = exports.unselectUserRole = reducer.createAction(_types.UNSELECT_USER_ROLE);
-
-var updateAdminUserStatus = exports.updateAdminUserStatus = reducer.createAction(_types.ADMINUSER_UPDATE_STATUS);
-var reinviteAdminUser = exports.reinviteAdminUser = reducer.createAction(_types.ADMINUSER_REINVITE);
 
 exports.default = reducer.bindReducer();
