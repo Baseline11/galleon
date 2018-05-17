@@ -14,3 +14,7 @@ export {default as CreatePassword} from './containers/CreatePassword';
 export {default as Navigation} from './containers/Navigation';
 
 export {default as UserGuide} from './containers/UserGuide';
+
+export {default as UserCommunications} from './containers/UserCommunications';
+
+export {default as UserInfoOverview} from './containers/UserInfoOverview';

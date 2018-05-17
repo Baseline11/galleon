@@ -20,9 +20,17 @@ var _fetchAdminUsers = require('./workers/fetchAdminUsers');
 
 var _fetchAdminUsers2 = _interopRequireDefault(_fetchAdminUsers);
 
+var _fetchUserCommunications = require('./workers/fetchUserCommunications');
+
+var _fetchUserCommunications2 = _interopRequireDefault(_fetchUserCommunications);
+
 var _savePassword = require('./workers/savePassword');
 
 var _savePassword2 = _interopRequireDefault(_savePassword);
+
+var _fetchUserInfo = require('./workers/fetchUserInfo');
+
+var _fetchUserInfo2 = _interopRequireDefault(_fetchUserInfo);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46,9 +54,17 @@ function mySaga() {
 
         case 6:
           _context.next = 8;
-          return (0, _effects.takeLatest)(_types.PASSWORD_SAVE, _savePassword2.default);
+          return (0, _effects.takeLatest)(_types.COMMUNICATIONS_FETCH, _fetchUserCommunications2.default);
 
         case 8:
+          _context.next = 10;
+          return (0, _effects.takeLatest)(_types.PASSWORD_SAVE, _savePassword2.default);
+
+        case 10:
+          _context.next = 12;
+          return (0, _effects.takeLatest)(_types.USER_INFO_FETCH, _fetchUserInfo2.default);
+
+        case 12:
         case 'end':
           return _context.stop();
       }

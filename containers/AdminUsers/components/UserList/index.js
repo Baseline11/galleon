@@ -148,7 +148,7 @@ function UserList(_ref) {
             rowClassName: 'action-style-override',
             headerHeight: headerHeight,
             headerStyle: _styles2.default.headerStyles,
-            headerClassName: 'header-style-override',
+            headerClassName: 'table-header-override',
             __source: {
               fileName: _jsxFileName,
               lineNumber: 49
