@@ -29,7 +29,7 @@ var _lodash = require('lodash');
 
 var _laelia = require('laelia');
 
-var _userInfo = require('commonRedux/actions//userInfo');
+var _userInfo = require('commonRedux/actions/userInfo');
 
 var _styles = require('./styles');
 
