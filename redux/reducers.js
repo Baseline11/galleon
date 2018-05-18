@@ -12,7 +12,7 @@ var _adminUser = require('./actions/adminUser');
 
 var _adminUser2 = _interopRequireDefault(_adminUser);
 
-var _actions = require('containers/AdminUsers/actions');
+var _actions = require('../containers/AdminUsers/actions');
 
 var _actions2 = _interopRequireDefault(_actions);
 
