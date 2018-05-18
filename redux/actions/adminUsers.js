@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.filterAdminUsers = exports.sortAdminUsers = exports.fetchAdminUsers = exports.initialState = undefined;
+exports.reinviteAdminUser = exports.updateAdminUserStatus = exports.filterAdminUsers = exports.sortAdminUsers = exports.fetchAdminUsers = exports.initialState = undefined;
 
 var _cases;
 
@@ -70,5 +70,8 @@ var reducer = new _reducer2.default(initialState, cases);
 var fetchAdminUsers = exports.fetchAdminUsers = reducer.createAction(_types.ADMINUSERS_FETCH);
 var sortAdminUsers = exports.sortAdminUsers = reducer.createAction(_types.ADMINUSERS_SORT);
 var filterAdminUsers = exports.filterAdminUsers = reducer.createAction(_types.ADMINUSERS_UPDATE_FILTER);
+
+var updateAdminUserStatus = exports.updateAdminUserStatus = reducer.createAction(_types.ADMINUSER_UPDATE_STATUS);
+var reinviteAdminUser = exports.reinviteAdminUser = reducer.createAction(_types.ADMINUSER_REINVITE);
 
 exports.default = reducer.bindReducer();

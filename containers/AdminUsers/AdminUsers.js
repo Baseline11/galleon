@@ -23,7 +23,7 @@ var _redux = require('redux');
 
 var _laelia = require('laelia');
 
-var _actions = require('./actions');
+var _adminUsers = require('commonRedux/actions/adminUsers');
 
 var _UserList = require('./components/UserList');
 
@@ -66,11 +66,11 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actionCreators: (0, _redux.bindActionCreators)({
-      fetchAdminUsers: _actions.fetchAdminUsers,
-      sortAdminUsers: _actions.sortAdminUsers,
-      filterAdminUsers: _actions.filterAdminUsers,
-      updateAdminUserStatus: _actions.updateAdminUserStatus,
-      reinviteAdminUser: _actions.reinviteAdminUser
+      fetchAdminUsers: _adminUsers.fetchAdminUsers,
+      sortAdminUsers: _adminUsers.sortAdminUsers,
+      filterAdminUsers: _adminUsers.filterAdminUsers,
+      updateAdminUserStatus: _adminUsers.updateAdminUserStatus,
+      reinviteAdminUser: _adminUsers.reinviteAdminUser
     }, dispatch)
   };
 }
