@@ -23,6 +23,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 var initialState = exports.initialState = {
   overview: [],
+  insurance: [],
   fetching: false,
   fetched: false
 };
@@ -33,7 +34,8 @@ var cases = (_cases = {}, _defineProperty(_cases, _types.USER_INFO_FETCH, functi
   });
 }), _defineProperty(_cases, _types.USER_INFO_FETCH_SUCCESS, function (state, action) {
   return _extends({}, state, {
-    overview: [].concat(_toConsumableArray(state.overview), _toConsumableArray(action.payload)),
+    overview: [].concat(_toConsumableArray(state.overview), _toConsumableArray(action.payload.overview)),
+    insurance: [].concat(_toConsumableArray(state.insurance), _toConsumableArray(action.payload.insurance)),
     fetching: false,
     fetched: true
   });

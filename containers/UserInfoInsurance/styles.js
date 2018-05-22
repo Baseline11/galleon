@@ -10,35 +10,39 @@ var _utils = require('utils');
 
 var styles = {
   containerStyle: _extends({}, _utils.fonts.baseText, {
-    width: 'inherit'
+    width: 'inherit',
+    display: 'flex',
+    flexDirection: 'row',
+    padding: '15px 20px'
   }),
-  profilePictureContainer: {
-    height: 180,
+  titleStyle: {
+    fontSize: 22,
+    color: _utils.colors.doveGrey,
+    padding: '25px 20px',
+    backgroundColor: _utils.colors.alto,
+    fontWeight: 'bold',
+    textTransform: 'uppercase'
+  },
+  insurerInfoContainer: {
+    flex: 1
+  },
+  carInfoContainer: {
+    flex: 1
+  },
+  insurerItemContainer: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-start'
+    flexDirection: 'column'
   },
-  profilePictureWrapper: {
-    width: 100
+  insurerLabelStyle: {
+    fontSize: 19,
+    fontWeight: 'bold',
+    paddingBottom: 10,
+    color: _utils.colors.doveGrey
   },
-  actionWrapper: {
-    paddingLeft: 20
-  },
-  actionButton: {
-    padding: 15,
-    height: 50,
-    background: _utils.colors.gray,
-    ':hover': {
-      background: _utils.colors.pictonBlue
-    }
-  },
-  infoContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexFlow: 'wrap',
-    alignContent: 'stretch'
+  insurerValueStyle: {
+    fontSize: 16,
+    paddingBottom: 30,
+    color: _utils.colors.doveGrey
   },
   labelStyle: {
     fontSize: 16,

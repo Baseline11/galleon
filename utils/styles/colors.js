@@ -13,6 +13,7 @@ var colors = {
   scorpion: '#575757',
   gray: '#808080',
   dustyGray: '#999',
+  alto: '#ddd',
   cornflowerBlue: '#6195ed',
   sushi: '#8fc345',
   jordyBlue: '#8fb4f2',
