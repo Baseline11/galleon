@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.sortCommunications = exports.fetchUserCommunications = exports.initialState = undefined;
+exports.sorTripHistory = exports.fetchUserTripHistory = exports.sortCommunications = exports.fetchUserCommunications = exports.initialState = undefined;
 
 var _cases;
 
@@ -23,6 +23,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = exports.initialState = {
   communications: [],
+  tripHistory: [],
   sort: {
     sortBy: 'date',
     sortDirection: 'ASC'
@@ -50,11 +51,32 @@ var cases = (_cases = {}, _defineProperty(_cases, _types.COMMUNICATIONS_FETCH, f
       sortDirection: action.payload.sortDirection
     }
   });
+}), _defineProperty(_cases, _types.TRIPHISTORY_FETCH, function (state) {
+  return _extends({}, state);
+}), _defineProperty(_cases, _types.TRIPHISTORY_FETCH_SUCCESS, function (state, action) {
+  return _extends({}, state, {
+    tripHistory: action.payload
+  });
+}), _defineProperty(_cases, _types.TRIPHISTORY_FETCH_FAILURE, function (state, action) {
+  return _extends({}, state, {
+    errors: action.payload
+  });
+}), _defineProperty(_cases, _types.TRIPHISTORY_SORT, function (state, action) {
+  return _extends({}, state, {
+    tripHistory: (0, _lodash.orderBy)(state.tripHistory, [action.payload.sortBy], [action.payload.sortDirection.toLowerCase()]),
+    sort: {
+      sortBy: action.payload.sortBy,
+      sortDirection: action.payload.sortDirection
+    }
+  });
 }), _cases);
 
 var reducer = new _reducer2.default(initialState, cases);
 
 var fetchUserCommunications = exports.fetchUserCommunications = reducer.createAction(_types.COMMUNICATIONS_FETCH);
 var sortCommunications = exports.sortCommunications = reducer.createAction(_types.COMMUNICATIONS_SORT);
+
+var fetchUserTripHistory = exports.fetchUserTripHistory = reducer.createAction(_types.TRIPHISTORY_FETCH);
+var sorTripHistory = exports.sorTripHistory = reducer.createAction(_types.TRIPHISTORY_SORT);
 
 exports.default = reducer.bindReducer();
