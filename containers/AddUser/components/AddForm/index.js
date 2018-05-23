@@ -515,7 +515,7 @@ var AddForm = function (_Component) {
                 lineNumber: 284
               }
             }),
-            _react2.default.createElement(_laelia.LinkToUrl, { url: '/admin_users', text: 'Cancel', styleOverride: _styles2.default.actionButton, __source: {
+            _react2.default.createElement(_laelia.NavigationButton, { url: '/admin_users', text: 'Cancel', styleOverride: _styles2.default.actionButton, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 290
               }
