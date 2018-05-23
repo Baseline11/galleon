@@ -36,6 +36,10 @@ var _fetchUserTripHistory = require('./workers/fetchUserTripHistory');
 
 var _fetchUserTripHistory2 = _interopRequireDefault(_fetchUserTripHistory);
 
+var _saveNote = require('./workers/saveNote');
+
+var _saveNote2 = _interopRequireDefault(_saveNote);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _marked = /*#__PURE__*/regeneratorRuntime.mark(mySaga);
@@ -73,6 +77,10 @@ function mySaga() {
           return (0, _effects.takeLatest)(_types.TRIPHISTORY_FETCH, _fetchUserTripHistory2.default);
 
         case 14:
+          _context.next = 16;
+          return (0, _effects.takeLatest)(_types.SAVE_USER_NOTE, _saveNote2.default);
+
+        case 16:
         case 'end':
           return _context.stop();
       }

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.sorTripHistory = exports.fetchUserTripHistory = exports.sortCommunications = exports.fetchUserCommunications = exports.initialState = undefined;
+exports.sorTripHistory = exports.fetchUserTripHistory = exports.saveNote = exports.sortCommunications = exports.fetchUserCommunications = exports.initialState = undefined;
 
 var _cases;
 
@@ -75,6 +75,7 @@ var reducer = new _reducer2.default(initialState, cases);
 
 var fetchUserCommunications = exports.fetchUserCommunications = reducer.createAction(_types.COMMUNICATIONS_FETCH);
 var sortCommunications = exports.sortCommunications = reducer.createAction(_types.COMMUNICATIONS_SORT);
+var saveNote = exports.saveNote = reducer.createAction(_types.SAVE_USER_NOTE);
 
 var fetchUserTripHistory = exports.fetchUserTripHistory = reducer.createAction(_types.TRIPHISTORY_FETCH);
 var sorTripHistory = exports.sorTripHistory = reducer.createAction(_types.TRIPHISTORY_SORT);
