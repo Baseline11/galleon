@@ -40,6 +40,10 @@ var _saveNote = require('./workers/saveNote');
 
 var _saveNote2 = _interopRequireDefault(_saveNote);
 
+var _fetchUserPolicies = require('./workers/fetchUserPolicies');
+
+var _fetchUserPolicies2 = _interopRequireDefault(_fetchUserPolicies);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _marked = /*#__PURE__*/regeneratorRuntime.mark(mySaga);
@@ -81,6 +85,10 @@ function mySaga() {
           return (0, _effects.takeLatest)(_types.SAVE_USER_NOTE, _saveNote2.default);
 
         case 16:
+          _context.next = 18;
+          return (0, _effects.takeLatest)(_types.POLICY_FETCH, _fetchUserPolicies2.default);
+
+        case 18:
         case 'end':
           return _context.stop();
       }

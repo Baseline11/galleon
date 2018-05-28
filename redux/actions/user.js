@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.sorTripHistory = exports.fetchUserTripHistory = exports.saveNote = exports.sortCommunications = exports.fetchUserCommunications = exports.initialState = undefined;
+exports.sortPolicy = exports.fetchUserPolicies = exports.sorTripHistory = exports.fetchUserTripHistory = exports.saveNote = exports.sortCommunications = exports.fetchUserCommunications = exports.initialState = undefined;
 
 var _cases;
 
@@ -24,6 +24,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var initialState = exports.initialState = {
   communications: [],
   tripHistory: [],
+  policies: [],
   sort: {
     sortBy: 'date',
     sortDirection: 'ASC'
@@ -34,14 +35,20 @@ var initialState = exports.initialState = {
 };
 
 var cases = (_cases = {}, _defineProperty(_cases, _types.COMMUNICATIONS_FETCH, function (state) {
-  return _extends({}, state);
+  return _extends({}, state, {
+    fetching: true
+  });
 }), _defineProperty(_cases, _types.COMMUNICATIONS_FETCH_SUCCESS, function (state, action) {
   return _extends({}, state, {
-    communications: action.payload
+    communications: action.payload,
+    fetching: false,
+    fetched: true
   });
 }), _defineProperty(_cases, _types.COMMUNICATIONS_FETCH_FAILURE, function (state, action) {
   return _extends({}, state, {
-    errors: action.payload
+    errors: action.payload,
+    fetching: false,
+    fetched: false
   });
 }), _defineProperty(_cases, _types.COMMUNICATIONS_SORT, function (state, action) {
   return _extends({}, state, {
@@ -52,18 +59,51 @@ var cases = (_cases = {}, _defineProperty(_cases, _types.COMMUNICATIONS_FETCH, f
     }
   });
 }), _defineProperty(_cases, _types.TRIPHISTORY_FETCH, function (state) {
-  return _extends({}, state);
+  return _extends({}, state, {
+    fetching: true
+  });
 }), _defineProperty(_cases, _types.TRIPHISTORY_FETCH_SUCCESS, function (state, action) {
   return _extends({}, state, {
-    tripHistory: action.payload
+    tripHistory: action.payload,
+    fetching: false,
+    fetched: true
   });
 }), _defineProperty(_cases, _types.TRIPHISTORY_FETCH_FAILURE, function (state, action) {
   return _extends({}, state, {
-    errors: action.payload
+    errors: action.payload,
+    fetching: false,
+    fetched: false
   });
 }), _defineProperty(_cases, _types.TRIPHISTORY_SORT, function (state, action) {
   return _extends({}, state, {
     tripHistory: (0, _lodash.orderBy)(state.tripHistory, [action.payload.sortBy], [action.payload.sortDirection.toLowerCase()]),
+    sort: {
+      sortBy: action.payload.sortBy,
+      sortDirection: action.payload.sortDirection
+    }
+  });
+}), _defineProperty(_cases, _types.POLICY_FETCH, function (state) {
+  return _extends({}, state, {
+    fetching: true
+  });
+}), _defineProperty(_cases, _types.POLICY_FETCH_SUCCESS, function (state, action) {
+  return _extends({}, state, {
+    policies: action.payload,
+    fetching: false,
+    fetched: true
+  });
+}), _defineProperty(_cases, _types.POLICY_FETCH_FAILURE, function (state, action) {
+  return _extends({}, state, {
+    errors: action.payload,
+    fetching: false,
+    fetched: false
+  });
+}), _defineProperty(_cases, _types.POLICY_SORT, function (state, action) {
+  return _extends({}, state, {
+    policies: (0, _lodash.orderBy)(state.policies
+    // [action.payload.sortBy],
+    // [action.payload.sortDirection.toLowerCase()]
+    ),
     sort: {
       sortBy: action.payload.sortBy,
       sortDirection: action.payload.sortDirection
@@ -79,5 +119,8 @@ var saveNote = exports.saveNote = reducer.createAction(_types.SAVE_USER_NOTE);
 
 var fetchUserTripHistory = exports.fetchUserTripHistory = reducer.createAction(_types.TRIPHISTORY_FETCH);
 var sorTripHistory = exports.sorTripHistory = reducer.createAction(_types.TRIPHISTORY_SORT);
+
+var fetchUserPolicies = exports.fetchUserPolicies = reducer.createAction(_types.POLICY_FETCH);
+var sortPolicy = exports.sortPolicy = reducer.createAction(_types.POLICY_SORT);
 
 exports.default = reducer.bindReducer();

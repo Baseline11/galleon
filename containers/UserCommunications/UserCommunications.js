@@ -29,7 +29,7 @@ var _CommunicationList2 = _interopRequireDefault(_CommunicationList);
 
 var _user = require('commonRedux/actions/user');
 
-var _styles = require('../EditUser/styles');
+var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 

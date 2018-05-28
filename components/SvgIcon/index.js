@@ -63,7 +63,9 @@ var SvgIcon = function (_Component) {
       userForum: _laelia.IconUserForum,
       whatsNew: _laelia.IconWhatsNew,
       externalLink: _laelia.IconExternalLink,
-      apiGuide: _laelia.IconApiGuide
+      apiGuide: _laelia.IconApiGuide,
+      plusIcon: _laelia.PlusIcon,
+      minusIcon: _laelia.MinusIcon
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -75,7 +77,7 @@ var SvgIcon = function (_Component) {
       return _react2.default.createElement(Icon, _extends({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 60
         }
       }));
     }
