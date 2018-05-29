@@ -156,8 +156,8 @@ var Policies = function (_Component) {
                   },
                   _react2.default.createElement(_SvgIcon2.default, {
                     icon: _this2.state.activePolicy === policy ? 'minusIcon' : 'plusIcon',
-                    width: 35,
-                    height: 35,
+                    width: 25,
+                    height: 25,
                     fill: _utils.colors.dustyGray,
                     __source: {
                       fileName: _jsxFileName,
