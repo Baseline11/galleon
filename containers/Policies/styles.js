@@ -24,7 +24,7 @@ var styles = {
     marginBottom: 2,
     height: 100,
     backgroundColor: _utils.colors.white,
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 'bold',
     color: _utils.colors.dustyGray,
     paddingLeft: 50,
