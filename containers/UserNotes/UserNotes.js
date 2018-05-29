@@ -3,12 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = 'src/containers/UserTripHistory/UserTripHistory.js';
+var _jsxFileName = 'src/containers/UserNotes/UserNotes.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-// import {Pagination} from 'laelia';
 
 var _react = require('react');
 
@@ -24,13 +23,17 @@ var _redux = require('redux');
 
 var _Progress = require('material-ui/Progress');
 
-var _TripHistoryList = require('./components/TripHistoryList');
+var _CreateNote = require('../CreateNote');
 
-var _TripHistoryList2 = _interopRequireDefault(_TripHistoryList);
+var _CreateNote2 = _interopRequireDefault(_CreateNote);
+
+var _NoteList = require('./components/NoteList');
+
+var _NoteList2 = _interopRequireDefault(_NoteList);
 
 var _user = require('commonRedux/actions/user');
 
-var _styles = require('../EditUser/styles');
+var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
@@ -49,36 +52,31 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actionCreators: (0, _redux.bindActionCreators)({
-      fetchUserTripHistory: _user.fetchUserTripHistory,
-      sortTripHistory: _user.sortTripHistory,
-      setLimitTripHistory: _user.setLimitTripHistory,
-      setOffsetTripHistory: _user.setOffsetTripHistory
+      fetchUserNotes: _user.fetchUserNotes
     }, dispatch)
   };
 }
 
-var UserTripHistory = function (_Component) {
-  _inherits(UserTripHistory, _Component);
+var UserNotes = function (_Component) {
+  _inherits(UserNotes, _Component);
 
-  function UserTripHistory() {
-    _classCallCheck(this, UserTripHistory);
+  function UserNotes() {
+    _classCallCheck(this, UserNotes);
 
-    return _possibleConstructorReturn(this, (UserTripHistory.__proto__ || Object.getPrototypeOf(UserTripHistory)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (UserNotes.__proto__ || Object.getPrototypeOf(UserNotes)).apply(this, arguments));
   }
 
-  _createClass(UserTripHistory, [{
+  _createClass(UserNotes, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      this.props.actionCreators.fetchUserTripHistory();
+      this.props.actionCreators.fetchUserNotes();
     }
   }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
           fetching = _props.fetching,
-          tripHistory = _props.tripHistory,
-          sort = _props.sort,
-          actionCreators = _props.actionCreators;
+          notes = _props.notes;
 
 
       return _react2.default.createElement(
@@ -86,28 +84,30 @@ var UserTripHistory = function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43
+            lineNumber: 37
           }
         },
         fetching ? _react2.default.createElement(_Progress.CircularProgress, { size: 50, style: _styles2.default.circularProgress, __source: {
             fileName: _jsxFileName,
-            lineNumber: 45
+            lineNumber: 39
           }
         }) : _react2.default.createElement(
           'div',
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 47
+              lineNumber: 41
             }
           },
-          _react2.default.createElement(_TripHistoryList2.default, {
-            data: tripHistory,
-            sortOptions: sort,
-            handleOnSort: actionCreators.sortTripHistory,
+          _react2.default.createElement(_CreateNote2.default, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 48
+              lineNumber: 42
+            }
+          }),
+          _react2.default.createElement(_NoteList2.default, { data: notes, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 43
             }
           })
         )
@@ -115,14 +115,13 @@ var UserTripHistory = function (_Component) {
     }
   }]);
 
-  return UserTripHistory;
+  return UserNotes;
 }(_react.Component);
 
-UserTripHistory.propTypes = {
+UserNotes.propTypes = {
   actionCreators: _propTypes2.default.object,
-  sort: _propTypes2.default.object,
   fetching: _propTypes2.default.bool,
-  tripHistory: _propTypes2.default.array
+  notes: _propTypes2.default.array
 };
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(UserTripHistory);
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(UserNotes);

@@ -60,7 +60,12 @@ var CreateNoteForm = function (_Component) {
             lineNumber: 15
           }
         },
-        _react2.default.createElement(_reduxForm.Field, { style: _styles2.default.formTextarea, name: 'note', component: 'textarea', placeholder: 'Take a note...', __source: {
+        _react2.default.createElement(_reduxForm.Field, {
+          style: _styles2.default.formTextarea,
+          name: 'note',
+          component: 'textarea',
+          placeholder: 'Take a note...',
+          __source: {
             fileName: _jsxFileName,
             lineNumber: 16
           }
@@ -73,7 +78,7 @@ var CreateNoteForm = function (_Component) {
           styleOverride: _styles2.default.actionButton,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17
+            lineNumber: 22
           }
         })
       );
@@ -85,7 +90,7 @@ var CreateNoteForm = function (_Component) {
 
 CreateNoteForm.propTypes = {
   handleSubmit: _propTypes2.default.func.isRequired,
-  dirty: _propTypes2.default.bool.isRequired
+  dirty: _propTypes2.default.bool
 };
 
 CreateNoteForm = (0, _reduxForm.reduxForm)({

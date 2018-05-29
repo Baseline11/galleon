@@ -50,7 +50,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actionCreators: (0, _redux.bindActionCreators)({
-      fetchUserInfo: _userInfo.fetchUserInfo
+      fetchUserInfo: _userInfo.fetchUserInfo,
+      deleteUserProfilePicture: _userInfo.deleteUserProfilePicture
     }, dispatch)
   };
 }
@@ -77,21 +78,21 @@ var UserInfoOverview = function (_Component) {
           'div',
           { key: item.label, style: _styles2.default.itemInfoContainer, __source: {
               fileName: _jsxFileName,
-              lineNumber: 33
+              lineNumber: 34
             }
           },
           _react2.default.createElement(
             'div',
             { style: _styles2.default.labelStyle, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 34
+                lineNumber: 35
               }
             },
             item.label
           ),
           _react2.default.createElement(_laelia.TextInput, { wrapperStyleOverride: _styles2.default.textInputStyle, defaultValue: item.value, disabled: true, __source: {
               fileName: _jsxFileName,
-              lineNumber: 35
+              lineNumber: 36
             }
           })
         );
@@ -100,10 +101,11 @@ var UserInfoOverview = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _props = this.props,
           overview = _props.overview,
-          containerStyleOverride = _props.containerStyleOverride,
-          handleSubmit = _props.handleSubmit;
+          containerStyleOverride = _props.containerStyleOverride;
 
       var items = (0, _lodash.reject)(overview, ['label', 'picture']);
       var picture = (0, _lodash.filter)(overview, ['label', 'picture'])[0];
@@ -112,26 +114,26 @@ var UserInfoOverview = function (_Component) {
         'div',
         { style: [_styles2.default.containerStyle, containerStyleOverride], __source: {
             fileName: _jsxFileName,
-            lineNumber: 46
+            lineNumber: 47
           }
         },
         _react2.default.createElement(
           'div',
           { style: _styles2.default.profilePictureContainer, __source: {
               fileName: _jsxFileName,
-              lineNumber: 47
+              lineNumber: 48
             }
           },
           _react2.default.createElement(
             'div',
             { style: _styles2.default.profilePictureWrapper, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 48
+                lineNumber: 49
               }
             },
             picture && _react2.default.createElement(_laelia.ProfilePicture, { image: picture.value, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 49
+                lineNumber: 50
               }
             })
           ),
@@ -139,16 +141,18 @@ var UserInfoOverview = function (_Component) {
             'div',
             { style: _styles2.default.actionWrapper, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 51
+                lineNumber: 52
               }
             },
             _react2.default.createElement(_laelia.ActionButton, {
               text: 'Delete',
-              action: handleSubmit,
+              action: function action() {
+                return _this2.props.actionCreators.deleteUserProfilePicture();
+              },
               styleOverride: _styles2.default.actionButton,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 52
+                lineNumber: 53
               }
             })
           )
@@ -157,7 +161,7 @@ var UserInfoOverview = function (_Component) {
           'div',
           { style: _styles2.default.infoContainer, __source: {
               fileName: _jsxFileName,
-              lineNumber: 59
+              lineNumber: 60
             }
           },
           items && this.renderItems(items)
@@ -172,7 +176,6 @@ var UserInfoOverview = function (_Component) {
 UserInfoOverview.propTypes = {
   actionCreators: _propTypes2.default.object,
   containerStyleOverride: _propTypes2.default.object,
-  handleSubmit: _propTypes2.default.func,
   overview: _propTypes2.default.array
 };
 

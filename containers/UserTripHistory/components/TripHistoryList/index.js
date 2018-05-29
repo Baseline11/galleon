@@ -158,16 +158,6 @@ function TripHistoryList(_ref) {
               fileName: _jsxFileName,
               lineNumber: 70
             }
-          }),
-          _react2.default.createElement(_reactVirtualized.Column, {
-            label: '',
-            dataKey: 'created',
-            width: 100,
-            style: _styles2.default.columnStyles,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 76
-            }
           })
         );
       }

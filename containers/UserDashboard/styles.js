@@ -17,27 +17,30 @@ var styles = {
   }),
   statisticsContainerStyle: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    width: '100%',
+    maxWidth: 475
   },
   statisticsItemStyle: {
+    color: 'red',
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    padding: '0 20px'
+    justifyContent: 'space-between'
   },
   statisticsValueStyle: {
-    fontSize: 34,
+    fontSize: 28,
     color: _utils.colors.pictonBlue,
     alignSelf: 'center'
   },
-  statisticsLabelStyles: {
-    fontSize: 18,
+  statisticsLabelStyles: _extends({}, _utils.fonts.baseText, {
     color: _utils.colors.dustyGray,
     alignSelf: 'center'
-  },
+  }),
   titleStyle: {
     color: _utils.colors.tundora,
-    fontSize: 40
+    fontSize: 34,
+    fontWeight: 400
   },
   profilePictureOverride: {
     backgroundColor: 'transparent'

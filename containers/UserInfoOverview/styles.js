@@ -13,10 +13,10 @@ var styles = {
     width: 'inherit'
   }),
   profilePictureContainer: {
-    height: 180,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    margin: '0 0 30px'
   },
   profilePictureWrapper: {
     width: 100

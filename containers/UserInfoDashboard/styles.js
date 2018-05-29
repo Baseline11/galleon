@@ -36,13 +36,12 @@ var styles = {
     paddingTop: 40,
     minWidth: 144
   },
-  generalInfoItemStyle: {
+  generalInfoItemStyle: _extends({}, _utils.fonts.baseText, {
     display: 'flex',
     flexDirection: 'row',
-    fontSize: 16,
     color: _utils.colors.doveGrey,
     paddingBottom: 15
-  },
+  }),
   generalInfoLabelStyles: {
     flex: 1
   },
@@ -50,23 +49,22 @@ var styles = {
     flex: 1,
     fontWeight: 'bold'
   },
-  rankItemContainerStyle: {
+  rankItemContainerStyle: _extends({}, _utils.fonts.baseText, {
     display: 'flex',
     flexDirection: 'row',
-    fontSize: 16,
     color: _utils.colors.doveGrey,
     paddingBottom: 15,
     justifyContent: 'flex-end'
-  },
-  rankItemLabelStyles: {
+  }),
+  rankItemLabelStyles: _extends({}, _utils.fonts.baseText, {
     flex: 1,
     alignSelf: 'center'
-  },
-  rankItemValueStyle: {
-    fontSize: 36,
+  }),
+  rankItemValueStyle: _extends({}, _utils.fonts.baseText, {
+    fontSize: 22,
     color: _utils.colors.pictonBlue,
     justifyContent: 'flex-end'
-  },
+  }),
   rankingItemExtraInfoStyle: {
     fontSize: 12
   },

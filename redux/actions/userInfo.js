@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.fetchUserInfo = exports.initialState = undefined;
+exports.deleteUserProfilePicture = exports.fetchUserInfo = exports.initialState = undefined;
 
 var _cases;
 
@@ -33,11 +33,13 @@ var cases = (_cases = {}, _defineProperty(_cases, _types.USER_INFO_FETCH, functi
   return _extends({}, state, {
     fetching: true
   });
+}), _defineProperty(_cases, _types.USER_DELETE_PICTURE, function (state) {
+  return _extends({}, state);
 }), _defineProperty(_cases, _types.USER_INFO_FETCH_SUCCESS, function (state, action) {
   return _extends({}, state, {
-    overview: [].concat(_toConsumableArray(state.overview), _toConsumableArray(action.payload.overview)),
-    dashboard: [].concat(_toConsumableArray(state.dashboard), _toConsumableArray(action.payload.dashboard)),
-    insurance: [].concat(_toConsumableArray(state.insurance), _toConsumableArray(action.payload.insurance)),
+    overview: action.payload.overview,
+    dashboard: action.payload.dashboard,
+    insurance: action.payload.insurance,
     fetching: false,
     fetched: true
   });
@@ -52,5 +54,6 @@ var cases = (_cases = {}, _defineProperty(_cases, _types.USER_INFO_FETCH, functi
 var reducer = new _reducer2.default(initialState, cases);
 
 var fetchUserInfo = exports.fetchUserInfo = reducer.createAction(_types.USER_INFO_FETCH);
+var deleteUserProfilePicture = exports.deleteUserProfilePicture = reducer.createAction(_types.USER_DELETE_PICTURE);
 
 exports.default = reducer.bindReducer();

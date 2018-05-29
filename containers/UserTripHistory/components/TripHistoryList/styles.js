@@ -14,7 +14,7 @@ exports.default = {
     background: _utils.colors.dustyGray,
     color: _utils.colors.white,
     margin: 0,
-    padding: '15px 10px',
+    padding: 15,
     textAlign: 'left',
     position: 'relative'
   }),
@@ -29,7 +29,7 @@ exports.default = {
   columnStyles: _extends({}, _utils.fonts.baseText, {
     fontSize: 12,
     margin: 0,
-    padding: '0 10px',
+    padding: '0 15px',
     color: _utils.colors.mineShaft
   })
 };

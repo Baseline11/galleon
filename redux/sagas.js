@@ -40,6 +40,14 @@ var _saveNote = require('./workers/saveNote');
 
 var _saveNote2 = _interopRequireDefault(_saveNote);
 
+var _fetchUserNotes = require('./workers/fetchUserNotes');
+
+var _fetchUserNotes2 = _interopRequireDefault(_fetchUserNotes);
+
+var _deleteUserProfilePicture = require('./workers/deleteUserProfilePicture');
+
+var _deleteUserProfilePicture2 = _interopRequireDefault(_deleteUserProfilePicture);
+
 var _fetchUserPolicies = require('./workers/fetchUserPolicies');
 
 var _fetchUserPolicies2 = _interopRequireDefault(_fetchUserPolicies);
@@ -86,9 +94,17 @@ function mySaga() {
 
         case 16:
           _context.next = 18;
-          return (0, _effects.takeLatest)(_types.POLICY_FETCH, _fetchUserPolicies2.default);
+          return (0, _effects.takeLatest)(_types.NOTES_FETCH, _fetchUserNotes2.default);
 
         case 18:
+          _context.next = 20;
+          return (0, _effects.takeLatest)(_types.USER_DELETE_PICTURE, _deleteUserProfilePicture2.default);
+
+        case 20:
+          _context.next = 22;
+          return (0, _effects.takeLatest)(_types.POLICY_FETCH, _fetchUserPolicies2.default);
+
+        case 22:
         case 'end':
           return _context.stop();
       }
