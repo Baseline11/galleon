@@ -25,7 +25,7 @@ exports.default = function (values) {
     errors.passwordSpecialChar = true;
   }
 
-  if (values.password.length < 11) {
+  if (values.password.length < 12) {
     errors.passwordLength = true;
   }
 

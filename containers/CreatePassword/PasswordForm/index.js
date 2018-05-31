@@ -101,7 +101,7 @@ var PasswordForm = function (_Component) {
           handleOnClickIcon: function handleOnClickIcon() {
             return _this.toggleVisibility(input.name);
           },
-          inputStyleOverride: { width: 'calc(100% - 22px)' },
+          inputStyleOverride: { width: '100%' },
           __source: {
             fileName: _jsxFileName,
             lineNumber: 60
