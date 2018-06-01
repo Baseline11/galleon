@@ -15,5 +15,12 @@ exports.default = {
   filterSelect: {
     width: 200,
     marginTop: 10
+  },
+  secondaryStyles: {
+    fontSize: 15,
+    position: 'absolute',
+    top: 25,
+    right: 50,
+    padding: '0 10px'
   }
 };
