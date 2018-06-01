@@ -29,7 +29,7 @@ var _radium = require('radium');
 
 var _radium2 = _interopRequireDefault(_radium);
 
-var _user = require('commonRedux/actions/user');
+var _user = require('../../redux/actions/user');
 
 var _Policy = require('../Policy');
 

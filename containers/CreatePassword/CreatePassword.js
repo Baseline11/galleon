@@ -25,7 +25,7 @@ var _PasswordForm = require('./PasswordForm');
 
 var _PasswordForm2 = _interopRequireDefault(_PasswordForm);
 
-var _newUser = require('commonRedux/actions/newUser');
+var _newUser = require('../../redux/actions/newUser');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

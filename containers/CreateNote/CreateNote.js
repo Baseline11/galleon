@@ -33,7 +33,7 @@ var _CreateNoteForm = require('./components/CreateNoteForm');
 
 var _CreateNoteForm2 = _interopRequireDefault(_CreateNoteForm);
 
-var _user = require('commonRedux/actions/user');
+var _user = require('../../redux/actions/user');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

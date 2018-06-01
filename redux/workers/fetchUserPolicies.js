@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _effects = require('redux-saga/effects');
 
-var _types = require('commonRedux/types');
+var _types = require('../types');
 
-var _userPolicies = require('helpers/mocks/api/userPolicies');
+var _userPolicies = require('../../helpers/mocks/api/userPolicies');
 
 var _userPolicies2 = _interopRequireDefault(_userPolicies);
 

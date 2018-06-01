@@ -21,7 +21,7 @@ var _redux = require('redux');
 
 var _laelia = require('laelia');
 
-var _application = require('commonRedux/actions/application');
+var _application = require('../../redux/actions/application');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

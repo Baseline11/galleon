@@ -31,7 +31,7 @@ var _NoteList = require('./components/NoteList');
 
 var _NoteList2 = _interopRequireDefault(_NoteList);
 
-var _user = require('commonRedux/actions/user');
+var _user = require('../../redux/actions/user');
 
 var _styles = require('./styles');
 

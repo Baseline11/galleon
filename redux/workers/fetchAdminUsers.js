@@ -6,13 +6,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var _effects = require('redux-saga/effects');
 
-var _types = require('commonRedux/types');
+var _types = require('../types');
 
-var _formatAdminUsers = require('helpers/formatAdminUsers');
+var _formatAdminUsers = require('../../helpers/formatAdminUsers');
 
 var _formatAdminUsers2 = _interopRequireDefault(_formatAdminUsers);
 
-var _adminUsers = require('helpers/mocks/api/adminUsers');
+var _adminUsers = require('../../helpers/mocks/api/adminUsers');
 
 var _adminUsers2 = _interopRequireDefault(_adminUsers);
 

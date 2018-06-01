@@ -28,7 +28,7 @@ var _TripHistoryList = require('./components/TripHistoryList');
 
 var _TripHistoryList2 = _interopRequireDefault(_TripHistoryList);
 
-var _user = require('commonRedux/actions/user');
+var _user = require('../../redux/actions/user');
 
 var _styles = require('../EditUser/styles');
 

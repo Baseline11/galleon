@@ -27,7 +27,7 @@ var _radium2 = _interopRequireDefault(_radium);
 
 var _lodash = require('lodash');
 
-var _userInfo = require('commonRedux/actions/userInfo');
+var _userInfo = require('../../redux/actions/userInfo');
 
 var _UserDashboard = require('../UserDashboard');
 

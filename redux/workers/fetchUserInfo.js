@@ -6,17 +6,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _effects = require('redux-saga/effects');
 
-var _types = require('commonRedux/types');
+var _types = require('../types');
 
-var _userInfoOverview = require('helpers/mocks/api/userInfoOverview');
+var _userInfoOverview = require('../../helpers/mocks/api/userInfoOverview');
 
 var _userInfoOverview2 = _interopRequireDefault(_userInfoOverview);
 
-var _userInfoDashboard = require('helpers/mocks/api/userInfoDashboard');
+var _userInfoDashboard = require('../../helpers/mocks/api/userInfoDashboard');
 
 var _userInfoDashboard2 = _interopRequireDefault(_userInfoDashboard);
 
-var _userInfoInsurance = require('helpers/mocks/api/userInfoInsurance');
+var _userInfoInsurance = require('../../helpers/mocks/api/userInfoInsurance');
 
 var _userInfoInsurance2 = _interopRequireDefault(_userInfoInsurance);
 

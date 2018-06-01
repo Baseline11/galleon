@@ -27,7 +27,7 @@ var _CommunicationList = require('./components/CommunicationList');
 
 var _CommunicationList2 = _interopRequireDefault(_CommunicationList);
 
-var _user = require('commonRedux/actions/user');
+var _user = require('../../redux/actions/user');
 
 var _styles = require('./styles');
 

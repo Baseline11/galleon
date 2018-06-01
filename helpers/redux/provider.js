@@ -21,11 +21,11 @@ var _reduxSaga = require('redux-saga');
 
 var _reduxSaga2 = _interopRequireDefault(_reduxSaga);
 
-var _sagas = require('commonRedux/sagas');
+var _sagas = require('../../redux/sagas');
 
 var _sagas2 = _interopRequireDefault(_sagas);
 
-var _reducers = require('commonRedux/reducers');
+var _reducers = require('../../redux/reducers');
 
 var _reducers2 = _interopRequireDefault(_reducers);
 

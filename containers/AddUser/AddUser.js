@@ -31,7 +31,7 @@ var _AddForm = require('./components/AddForm');
 
 var _AddForm2 = _interopRequireDefault(_AddForm);
 
-var _adminUser = require('commonRedux/actions/adminUser');
+var _adminUser = require('../../redux/actions/adminUser');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

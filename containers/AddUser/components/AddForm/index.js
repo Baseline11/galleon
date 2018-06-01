@@ -27,7 +27,7 @@ var _lodash = require('lodash');
 
 var _laelia = require('laelia');
 
-var _adminUser = require('commonRedux/actions/adminUser');
+var _adminUser = require('../../../../redux/actions/adminUser');
 
 var _userRoles = require('utils/config/userRoles');
 

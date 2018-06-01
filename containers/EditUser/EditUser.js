@@ -31,7 +31,7 @@ var _EditForm = require('./EditForm');
 
 var _EditForm2 = _interopRequireDefault(_EditForm);
 
-var _adminUser = require('commonRedux/actions/adminUser');
+var _adminUser = require('../../redux/actions/adminUser');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
