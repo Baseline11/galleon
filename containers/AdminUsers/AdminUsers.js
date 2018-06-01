@@ -33,10 +33,6 @@ var _SearchResultTitle = require('./components/SearchResultTitle');
 
 var _SearchResultTitle2 = _interopRequireDefault(_SearchResultTitle);
 
-var _AddUserButton = require('./components/AddUserButton');
-
-var _AddUserButton2 = _interopRequireDefault(_AddUserButton);
-
 var _userRoles = require('utils/config/userRoles');
 
 var _userRoles2 = _interopRequireDefault(_userRoles);
@@ -120,16 +116,15 @@ var AdminUsers = function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 68
+            lineNumber: 67
           }
         },
         _react2.default.createElement(_SearchResultTitle2.default, { data: adminUsers.length, __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 68
           }
         }),
-        _react2.default.createElement(_AddUserButton2.default, {
-          __source: {
+        _react2.default.createElement(_laelia.NavigationButton, { url: '/admin_users/add', text: 'New User', styleOverride: _styles2.default.secondaryStyles, __source: {
             fileName: _jsxFileName,
             lineNumber: 70
           }
@@ -138,7 +133,7 @@ var AdminUsers = function (_Component) {
           'div',
           { style: _styles2.default.filterWrapper, __source: {
               fileName: _jsxFileName,
-              lineNumber: 71
+              lineNumber: 72
             }
           },
           _react2.default.createElement(
@@ -146,7 +141,7 @@ var AdminUsers = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 72
+                lineNumber: 73
               }
             },
             'User role',
@@ -163,7 +158,7 @@ var AdminUsers = function (_Component) {
               wrapperStyleOverride: _styles2.default.filterSelect,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 74
+                lineNumber: 75
               }
             })
           ),
@@ -172,7 +167,7 @@ var AdminUsers = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 85
+                lineNumber: 86
               }
             },
             'Status',
@@ -189,7 +184,7 @@ var AdminUsers = function (_Component) {
               wrapperStyleOverride: _styles2.default.filterSelect,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 87
+                lineNumber: 88
               }
             })
           )
@@ -202,7 +197,7 @@ var AdminUsers = function (_Component) {
           handleOnSort: actionCreators.sortAdminUsers,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99
+            lineNumber: 100
           }
         })
       );
