@@ -1,9 +1,8 @@
 // export combined reducers as a whole tree
 export {default as Reducers} from './redux/reducers';
 
-// export containers with their own reducer
+// export containers
 export {default as AdminUsers} from './containers/AdminUsers';
-export {default as AdminUsersReducer} from './containers/AdminUsers/actions';
 
 export {default as AddUser} from './containers/AddUser';
 

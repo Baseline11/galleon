@@ -12,9 +12,9 @@ var _adminUser = require('./actions/adminUser');
 
 var _adminUser2 = _interopRequireDefault(_adminUser);
 
-var _actions = require('../containers/AdminUsers/actions');
+var _adminUsers = require('./actions/adminUsers');
 
-var _actions2 = _interopRequireDefault(_actions);
+var _adminUsers2 = _interopRequireDefault(_adminUsers);
 
 var _newUser = require('./actions/newUser');
 
@@ -37,7 +37,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = (0, _redux.combineReducers)({
   form: _reduxForm.reducer,
   adminUser: _adminUser2.default,
-  adminUsers: _actions2.default,
+  adminUsers: _adminUsers2.default,
   newUser: _newUser2.default,
   user: _user2.default,
   application: _application2.default,
