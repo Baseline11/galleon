@@ -23,7 +23,7 @@ var _redux = require('redux');
 
 var _laelia = require('laelia');
 
-var _adminUsers = require('commonRedux/actions/adminUsers');
+var _adminUsers = require('../../redux/actions/adminUsers');
 
 var _UserList = require('./components/UserList');
 
@@ -33,11 +33,11 @@ var _SearchResultTitle = require('./components/SearchResultTitle');
 
 var _SearchResultTitle2 = _interopRequireDefault(_SearchResultTitle);
 
-var _userRoles = require('utils/config/userRoles');
+var _userRoles = require('../../utils/config/userRoles');
 
 var _userRoles2 = _interopRequireDefault(_userRoles);
 
-var _filterCollectionByKey = require('helpers/filterCollectionByKey');
+var _filterCollectionByKey = require('../../helpers/filterCollectionByKey');
 
 var _filterCollectionByKey2 = _interopRequireDefault(_filterCollectionByKey);
 

@@ -19,7 +19,7 @@ var _reactVirtualized = require('react-virtualized');
 
 var _laelia = require('laelia');
 
-var _getAdminActionFromUserStatus = require('helpers/getAdminActionFromUserStatus');
+var _getAdminActionFromUserStatus = require('../../../../helpers/getAdminActionFromUserStatus');
 
 var _getAdminActionFromUserStatus2 = _interopRequireDefault(_getAdminActionFromUserStatus);
 
