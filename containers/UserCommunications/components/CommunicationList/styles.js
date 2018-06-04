@@ -31,5 +31,9 @@ exports.default = {
     margin: 0,
     padding: '0 10px',
     color: _utils.colors.mineShaft
-  })
+  }),
+  textLinkCell: {
+    textDecoration: 'none',
+    color: _utils.colors.pictonBlue
+  }
 };

@@ -45,9 +45,30 @@ function UserList(_ref) {
       cellData
     );
   };
-  var sortData = function sortData(_ref4) {
-    var sortBy = _ref4.sortBy,
-        sortDirection = _ref4.sortDirection;
+  var textLinkCell = function textLinkCell(_ref4) {
+    var cellData = _ref4.cellData;
+    return _react2.default.createElement(
+      'span',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      },
+      _react2.default.createElement(
+        'a',
+        { style: _styles2.default.textLinkCell, href: '/communications/communications/view/' + cellData, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13
+          }
+        },
+        cellData
+      )
+    );
+  };
+  var sortData = function sortData(_ref5) {
+    var sortBy = _ref5.sortBy,
+        sortDirection = _ref5.sortDirection;
     return handleOnSort({ sortBy: sortBy, sortDirection: sortDirection });
   };
 
@@ -55,18 +76,18 @@ function UserList(_ref) {
     'div',
     { style: _styles2.default.tableStyles, __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 18
       }
     },
     _react2.default.createElement(
       _reactVirtualized.AutoSizer,
       { disableHeight: true, __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 19
         }
       },
-      function (_ref5) {
-        var width = _ref5.width;
+      function (_ref6) {
+        var width = _ref6.width;
         return _react2.default.createElement(
           _reactVirtualized.Table,
           {
@@ -85,7 +106,7 @@ function UserList(_ref) {
             cellRenderer: defaultCell,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 18
+              lineNumber: 21
             }
           },
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -95,7 +116,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 33
+              lineNumber: 36
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -105,7 +126,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 39
+              lineNumber: 42
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -115,7 +136,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 45
+              lineNumber: 48
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -125,7 +146,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 51
+              lineNumber: 54
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -136,7 +157,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 57
+              lineNumber: 60
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -144,9 +165,10 @@ function UserList(_ref) {
             dataKey: 'id',
             width: 100,
             style: _styles2.default.columnStyles,
+            cellRenderer: textLinkCell,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 64
+              lineNumber: 67
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -156,7 +178,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 70
+              lineNumber: 74
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -166,7 +188,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 76
+              lineNumber: 80
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -176,7 +198,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 82
+              lineNumber: 86
             }
           })
         );
