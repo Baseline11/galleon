@@ -52,6 +52,10 @@ var _fetchUserPolicies = require('./workers/fetchUserPolicies');
 
 var _fetchUserPolicies2 = _interopRequireDefault(_fetchUserPolicies);
 
+var _fetchUsers = require('./workers/fetchUsers');
+
+var _fetchUsers2 = _interopRequireDefault(_fetchUsers);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _marked = /*#__PURE__*/regeneratorRuntime.mark(mySaga);
@@ -105,6 +109,10 @@ function mySaga() {
           return (0, _effects.takeLatest)(_types.POLICY_FETCH, _fetchUserPolicies2.default);
 
         case 22:
+          _context.next = 24;
+          return (0, _effects.takeLatest)(_types.USERS_FETCH, _fetchUsers2.default);
+
+        case 24:
         case 'end':
           return _context.stop();
       }

@@ -32,6 +32,10 @@ var _userInfo = require('./actions/userInfo');
 
 var _userInfo2 = _interopRequireDefault(_userInfo);
 
+var _users = require('./actions/users');
+
+var _users2 = _interopRequireDefault(_users);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _redux.combineReducers)({
@@ -41,5 +45,6 @@ exports.default = (0, _redux.combineReducers)({
   newUser: _newUser2.default,
   user: _user2.default,
   application: _application2.default,
-  userInfo: _userInfo2.default
+  userInfo: _userInfo2.default,
+  users: _users2.default
 });
