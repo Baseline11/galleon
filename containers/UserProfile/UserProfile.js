@@ -41,7 +41,7 @@ var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _userProfileTabs = require('utils/config/userProfileTabs');
+var _userProfileTabs = require('../../utils/config/userProfileTabs');
 
 var _userProfileTabs2 = _interopRequireDefault(_userProfileTabs);
 
