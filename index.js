@@ -18,4 +18,6 @@ export {default as UserCommunications} from './containers/UserCommunications';
 
 export {default as UserInfoOverview} from './containers/UserInfoOverview';
 
+export {default as UserProfile} from './containers/UserProfile';
+
 export {default as TripMap} from './containers/TripMap';
