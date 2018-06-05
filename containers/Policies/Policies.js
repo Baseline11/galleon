@@ -39,7 +39,7 @@ var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _SvgIcon = require('components/SvgIcon');
+var _SvgIcon = require('../../components/SvgIcon');
 
 var _SvgIcon2 = _interopRequireDefault(_SvgIcon);
 
