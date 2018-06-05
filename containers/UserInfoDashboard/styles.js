@@ -16,7 +16,8 @@ var styles = {
     alignItems: 'flex-start',
     justifyContent: 'center',
     backgroundColor: _utils.colors.white,
-    height: 260
+    height: 260,
+    padding: '0 0 10px 0'
   }),
   generalInfoContainerStyle: {
     flex: 1,

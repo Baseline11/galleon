@@ -44,13 +44,14 @@ var UserDashboard = function (_Component) {
 
   _createClass(UserDashboard, [{
     key: 'rendeProfileContainer',
-    value: function rendeProfileContainer(image, counter, containerStyleOverride, counterIconStyleOverride) {
+    value: function rendeProfileContainer(image, text, counter, containerStyleOverride, counterIconStyleOverride) {
       var styleContainer = containerStyleOverride || _styles2.default.profilePictureOverride;
       var counterStyleContainer = counterIconStyleOverride || _styles2.default.counterIconStyleOverride;
 
       return _react2.default.createElement(_laelia.ProfilePictureContainer, {
         image: image.value,
         counter: counter.value,
+        text: text.charAt(0),
         containerStyleOverride: styleContainer,
         counterIconStyleOverride: counterStyleContainer,
         __source: {
@@ -61,16 +62,17 @@ var UserDashboard = function (_Component) {
     }
   }, {
     key: 'rendeProfileImage',
-    value: function rendeProfileImage(image, containerStyleOverride, imageStyleOverride) {
+    value: function rendeProfileImage(image, text, containerStyleOverride, imageStyleOverride) {
       var styleContainer = containerStyleOverride || _styles2.default.profilePictureOverride;
 
       return _react2.default.createElement(_laelia.ProfilePicture, {
         image: image.value,
+        text: text.charAt(0),
         containerStyleOverride: styleContainer,
         imageStyleOverride: imageStyleOverride,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 28
         }
       });
     }
@@ -84,7 +86,7 @@ var UserDashboard = function (_Component) {
         containerStyleOverride: styleContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 41
         }
       });
     }
@@ -95,7 +97,7 @@ var UserDashboard = function (_Component) {
         'h2',
         { style: _styles2.default.titleStyle, __source: {
             fileName: _jsxFileName,
-            lineNumber: 48
+            lineNumber: 50
           }
         },
         text
@@ -108,7 +110,7 @@ var UserDashboard = function (_Component) {
         'div',
         { style: _styles2.default.statisticsContainerStyle, __source: {
             fileName: _jsxFileName,
-            lineNumber: 54
+            lineNumber: 56
           }
         },
         items.map(function (item, index) {
@@ -116,14 +118,14 @@ var UserDashboard = function (_Component) {
             'div',
             { style: _styles2.default.statisticsItemStyle, key: 'statisticsInfo-' + index, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 56
+                lineNumber: 58
               }
             },
             _react2.default.createElement(
               'div',
               { style: _styles2.default.statisticsValueStyle, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 57
+                  lineNumber: 59
                 }
               },
               item.value
@@ -132,7 +134,7 @@ var UserDashboard = function (_Component) {
               'div',
               { style: _styles2.default.statisticsLabelStyles, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 58
+                  lineNumber: 60
                 }
               },
               item.label
@@ -161,11 +163,11 @@ var UserDashboard = function (_Component) {
         'div',
         { style: [_styles2.default.dashboardContainerStyle, containerStyleOverride], __source: {
             fileName: _jsxFileName,
-            lineNumber: 80
+            lineNumber: 82
           }
         },
-        typeContainer === 'profileContainer' && this.rendeProfileContainer(profileImage, rank, profilePictureOverride, counterIconStyleOverride),
-        typeContainer === 'profileImage' && this.rendeProfileImage(profileImage, profilePictureOverride, counterIconStyleOverride),
+        typeContainer === 'profileContainer' && this.rendeProfileContainer(profileImage, title.value, rank, profilePictureOverride, counterIconStyleOverride),
+        typeContainer === 'profileImage' && this.rendeProfileImage(profileImage, title.value, profilePictureOverride, counterIconStyleOverride),
         typeContainer === 'counter' && this.renderCounter(rank, profilePictureOverride),
         title && this.renderTitle(title.value),
         statistics && this.renderRankings(statistics)
