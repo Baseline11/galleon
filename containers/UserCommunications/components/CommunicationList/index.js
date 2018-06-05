@@ -140,16 +140,6 @@ function UserList(_ref) {
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
-            label: 'Recipient',
-            dataKey: 'recipient',
-            width: 100,
-            style: _styles2.default.columnStyles,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 54
-            }
-          }),
-          _react2.default.createElement(_reactVirtualized.Column, {
             label: 'Title',
             dataKey: 'title',
             width: 250,
@@ -157,7 +147,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 60
+              lineNumber: 54
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -168,7 +158,7 @@ function UserList(_ref) {
             cellRenderer: textLinkCell,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 67
+              lineNumber: 61
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -178,7 +168,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 74
+              lineNumber: 68
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -188,7 +178,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 80
+              lineNumber: 74
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -198,7 +188,7 @@ function UserList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 86
+              lineNumber: 80
             }
           })
         );
