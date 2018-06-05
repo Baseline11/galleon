@@ -139,7 +139,7 @@ var UserProfile = function (_Component) {
           },
           selectedTab === 'overview' && _react2.default.createElement(
             'div',
-            { style: _styles2.default.infoOverviewContent, __source: {
+            { style: _styles2.default.tabContent, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 39
               }
@@ -153,8 +153,7 @@ var UserProfile = function (_Component) {
           ),
           selectedTab === 'tripHistory' && _react2.default.createElement(
             'div',
-            {
-              __source: {
+            { style: _styles2.default.tabContent, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 44
               }
@@ -168,8 +167,7 @@ var UserProfile = function (_Component) {
           ),
           selectedTab === 'communications' && _react2.default.createElement(
             'div',
-            {
-              __source: {
+            { style: _styles2.default.tabContent, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 49
               }
@@ -183,8 +181,7 @@ var UserProfile = function (_Component) {
           ),
           selectedTab === 'policies' && _react2.default.createElement(
             'div',
-            {
-              __source: {
+            { style: _styles2.default.tabContent, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 54
               }

@@ -18,7 +18,7 @@ exports.default = {
   tabsWrapper: {
     background: _utils.colors.white
   },
-  infoOverviewContent: {
+  tabContent: {
     background: _utils.colors.white,
     padding: 30
   },
