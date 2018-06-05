@@ -22,6 +22,10 @@ exports.default = {
     background: _utils.colors.white,
     padding: 30
   },
+  tableContent: {
+    background: _utils.colors.white,
+    padding: '0 0 30px'
+  },
   notesContent: {
     padding: '30px 0 0'
   }

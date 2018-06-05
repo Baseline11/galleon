@@ -153,7 +153,7 @@ var UserProfile = function (_Component) {
           ),
           selectedTab === 'tripHistory' && _react2.default.createElement(
             'div',
-            { style: _styles2.default.tabContent, __source: {
+            { style: _styles2.default.tableContent, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 44
               }
@@ -167,7 +167,7 @@ var UserProfile = function (_Component) {
           ),
           selectedTab === 'communications' && _react2.default.createElement(
             'div',
-            { style: _styles2.default.tabContent, __source: {
+            { style: _styles2.default.tableContent, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 49
               }
