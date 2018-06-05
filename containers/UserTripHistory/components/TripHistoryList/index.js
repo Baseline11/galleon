@@ -91,7 +91,7 @@ function TripHistoryList(_ref) {
           _react2.default.createElement(_reactVirtualized.Column, {
             label: 'Date',
             dataKey: 'date',
-            width: 100,
+            width: 120,
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
@@ -121,7 +121,8 @@ function TripHistoryList(_ref) {
           _react2.default.createElement(_reactVirtualized.Column, {
             label: 'From',
             dataKey: 'from',
-            width: 100,
+            width: 150,
+            flexGrow: 1,
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
@@ -131,12 +132,12 @@ function TripHistoryList(_ref) {
           _react2.default.createElement(_reactVirtualized.Column, {
             label: 'To',
             dataKey: 'to',
-            width: 250,
+            width: 150,
             flexGrow: 1,
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 57
+              lineNumber: 58
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -146,7 +147,7 @@ function TripHistoryList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 64
+              lineNumber: 65
             }
           }),
           _react2.default.createElement(_reactVirtualized.Column, {
@@ -156,7 +157,7 @@ function TripHistoryList(_ref) {
             style: _styles2.default.columnStyles,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 70
+              lineNumber: 71
             }
           })
         );
